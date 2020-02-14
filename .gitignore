@@ -40,10 +40,13 @@
 *.synctex.gz(busy)
 *.pdfsync
 
+<<<<<<< HEAD
+=======
 ## Build tool directories for auxiliary files
 # latexrun
 latex.out/
 
+>>>>>>> d8c534fde84aca0567d8405cb0c966ec52537963
 ## Auxiliary and intermediate files from other packages:
 # algorithms
 *.alg
@@ -64,9 +67,12 @@ acs-*.bib
 # changes
 *.soc
 
+<<<<<<< HEAD
+=======
 # comment
 *.cut
 
+>>>>>>> d8c534fde84aca0567d8405cb0c966ec52537963
 # cprotect
 *.cpt
 
@@ -109,11 +115,14 @@ acs-*.bib
 *.glo
 *.gls
 *.glsdefs
+<<<<<<< HEAD
+=======
 *.lzo
 *.lzs
 
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
 # *.ist
+>>>>>>> d8c534fde84aca0567d8405cb0c966ec52537963
 
 # gnuplottex
 *-gnuplottex-*
@@ -142,13 +151,20 @@ acs-*.bib
 # listings
 *.lol
 
+<<<<<<< HEAD
+=======
 # luatexja-ruby
 *.ltjruby
 
+>>>>>>> d8c534fde84aca0567d8405cb0c966ec52537963
 # makeidx
 *.idx
 *.ilg
 *.ind
+<<<<<<< HEAD
+*.ist
+=======
+>>>>>>> d8c534fde84aca0567d8405cb0c966ec52537963
 
 # minitoc
 *.maf
@@ -198,9 +214,12 @@ sympy-plots-for-*.tex/
 *.pytxcode
 pythontex-files-*/
 
+<<<<<<< HEAD
+=======
 # tcolorbox
 *.listing
 
+>>>>>>> d8c534fde84aca0567d8405cb0c966ec52537963
 # thmtools
 *.loe
 
@@ -212,6 +231,11 @@ pythontex-files-*/
 # todonotes
 *.tdo
 
+<<<<<<< HEAD
+# easy-todo
+*.lod
+
+=======
 # vhistory
 *.hst
 *.ver
@@ -222,15 +246,21 @@ pythontex-files-*/
 # xcolor
 *.xcp
 
+>>>>>>> d8c534fde84aca0567d8405cb0c966ec52537963
 # xmpincl
 *.xmpi
 
 # xindy
 *.xdy
 
+<<<<<<< HEAD
+# xypic precompiled matrices
+*.xyc
+=======
 # xypic precompiled matrices and outlines
 *.xyc
 *.xyd
+>>>>>>> d8c534fde84aca0567d8405cb0c966ec52537963
 
 # endfloat
 *.ttt
@@ -247,6 +277,14 @@ TSWLatexianTemp*
 # Texpad
 .texpadtmp
 
+<<<<<<< HEAD
+# Kile
+*.backup
+
+# KBibTeX
+*~[0-9]*
+
+=======
 # LyX
 *.lyx~
 
@@ -262,6 +300,7 @@ TSWLatexianTemp*
 # TeXnicCenter
 *.tps
 
+>>>>>>> d8c534fde84aca0567d8405cb0c966ec52537963
 # auto folder when using emacs and auctex
 ./auto/*
 *.el
@@ -272,5 +311,10 @@ TSWLatexianTemp*
 # standalone packages
 *.sta
 
+<<<<<<< HEAD
+# generated if using elsarticle.cls
+*.spl
+=======
 # Makeindex log files
 *.lpz
+>>>>>>> d8c534fde84aca0567d8405cb0c966ec52537963

@@ -1,0 +1,526 @@
+\documentclass[12pt,titlepage,openbib]{beamer}
+
+\author{Pritvi Jheengut @zcoldplayer}
+\title{Radio Regulations for IOT in Mauritius}
+%\subtitle{}
+
+% \usepackage{ucs}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[size=a4, orientation=landscape, scale=4]{beamerposter}
+
+\usepackage{lmodern}
+\usepackage{fontenc}[T1]
+\usepackage{inputenc}[utf8]
+\usepackage{hyperref}[pdfpagelabels=true,bookmarks=true,388unicode=true]
+
+% \usepackage[pdftex]{hyperref}
+% \hypersetup{%
+%   bookmarks=,%
+%   pdfcreator=,%
+%   pdffitwindow=%
+% }
+
+\usepackage{pgf}
+\usepackage{verbatim}
+
+\usepackage{listings}
+\usepackage{xy}[all]
+% \usepackage[english,francais,UKenglish]{babel}
+
+% Eliminate errors such as
+% LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <4> not available
+% LaTeX Font Warning: Size substitutions with differences up to 1.0pt 
+
+% \usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\mode<presentation>{
+
+  \usetheme{Frankfurt}
+  \useoutertheme{infolines}
+  \usecolortheme{cormorant}
+  
+  \definecolor{darkblue}{HTML}{100080}
+  
+  \setbeamercolor{Title bar}{parent=black,bg=darkblue,fg=white}
+  \setbeamercolor{title}{parent=black,bg=darkblue,fg=white}
+  \setbeamercolor{frametitle}{parent=white,bg=darkblue,fg=gray}
+  \setbeamercolor{titlelike}{parent=gray,bg=darkblue,fg=black}
+  \setbeamercolor{block title}{parent=black,bg=darkblue,fg=gray}
+  
+  \setbeamercovered{transparent,dynamic}
+  
+  \setbeamertemplate{blocks}[rounded][shadow=true]
+  \setbeamertemplate{background canvas}[vertical shading]
+                    [top=darkblue!80,middle=darkblue!50,bottom=darkblue!80]
+                    
+% \mode<handout>{\beamertemplatesolidbackgroundcolor{black!50}}
+                    
+}
+
+\makeindex
+
+\begin{document}
+
+\date[]{Phase II \\
+  University of Mauritius \\
+  Saturday 15$^{th}$ February 2020}
+
+\maketitle
+
+\tableofcontents
+
+\section{CopyLeft License}
+
+\frame{
+  \frametitle{Copyleft License Attribution}
+  
+  Made with love using beamer, LaTeX and git.\\
+  You can view at \href{https://github.com/Presentation-PritviJheengut/Radio_Regulations_for_IOT_in_Mauritius
+  }{Radio Regulations for IOT in Mauritius}
+  
+  \begin{alertblock}{This work is licensed under the LaTeX Project
+      Public License.}
+
+    To view a copy of this license, visit \\
+    \url{https://www.latex-project.org/lppl.txt} 
+    
+  \end{alertblock}
+  
+  \begin{alertblock}{This work is licensed under the Creative
+      Commons Attribution 4.0 International License.}
+
+    To view a copy of this license, visit \\
+    \url{http://creativecommons.org/licenses/by/4.0/} or \\
+    send a letter to \\
+    Creative Commons, \\
+    PO Box 1866, \\
+    Mountain View, \\
+    CA 94042, \\
+    USA. \\
+
+  \end{alertblock}
+}
+
+\section{Greetings}
+
+\frame{
+  \frametitle{Who Am I}
+  
+  \begin{block}{Who Am I}
+    
+    \href{http://slackware.com/}{Geek@Slackware}
+    
+    \href{https://twitter.com/zcoldplayer}{twitter @zcoldplayer}
+    
+    \href{https://xmail.net/z.coldplayer}{zcoldplayer xmail Website}
+    
+    \href{http://metservice.intnet.mu/}{Work
+      : SMTT@Meteorological.Services.mu}
+    
+    Active in many User group LUGM, MMC, MSCC, FECM, GDG\_MU \\
+    and several other hackathons
+    
+    Passionate about how and why things work.
+    
+    Fervour Advocate of Free Libre and Open Source Software.
+    
+  \end{block}
+
+}
+
+\frame{
+  \frametitle{Who are you}
+  
+  \begin{block}{Would you mind tell me who you are?}
+
+    \begin{enumerate}
+      
+    \item @twitter\_handle
+    \item where you work
+    \item email you want to share
+    \item Hobbies
+    \item purpose and expectations of this session
+
+    \end{enumerate}      
+
+  \end{block}
+  
+}
+
+\section{Community Groups in Mauritius}
+
+\frame{
+  \frametitle{Community Groups in Mauritius}
+  
+  \begin{block}{Healthy growth of Community Groups in Mauritius}
+    
+    This turn of the century has seen an uprising of Community
+    groups in Mauritius in the field of the Digital World. The
+    diversity has helped the exchange and sharing of innovative
+    ideas, experience, bleeding edge technology, upcoming events,
+    conferences in the Digital Island of the Republic of
+    Mauritius.
+
+  \end{block}
+  
+  This is a list of some of the active communities in Digital
+  Mauritius.
+
+  \begin{itemize}
+    
+  \item Linux User Group Meta, LUGM
+  \item Mauritius Software Craftmanship Community, MSCC
+  \item Mauritius Makers Community, MMC
+  \item Front-End Coders Mauritius, FECM
+  \item PHP User Group of Mauritius, phpMauritiusUG
+  \item Symfonymu
+  \item Google Developers Group Mauritius, GDG\_M
+  \item Digital Marketing Mauritius
+  \item Python User Group, PyMUG
+    
+  \end{itemize}
+  
+}
+
+\section{How I relate to this subject}
+
+\frame{
+  \frametitle{My experience with Radio Regulations}
+
+  \begin{block}{My experience with Radio Regulations}
+
+    \large
+    
+    \begin{itemize}
+    \item My project was Software Correlation for Radio Astronomy at
+      The Mauritius Radio Telescope, MRT.
+    \item I work at the Meteorological Services and I work with both VHF
+      and HF Radio systems as well as the Doppler Weather Radar.
+    \item \href{https://en.wikipedia.org/wiki/DVB-T}{I use a DVB-T
+      reciever unit.}
+    \item Co-founder of the Mauritius Maker Community
+    \end{itemize}
+
+  \end{block}
+  
+}
+
+\section{IOT and Radio Communication}
+
+\frame{
+  \frametitle{What is IoT?}
+
+  \begin{block}{What is IoT}
+
+    \begin{center}
+
+      Internet of Things
+      
+      Always internet connected computing device
+      
+      \pause
+      
+      eg :: mobile phone
+
+      I'll continue to use this as a reference for IoT
+      and radio frequencies.
+      
+    \end{center}
+
+  \end{block}
+
+  \pause
+
+  \begin{block}{Communication for IoT}
+
+    Communication for IoT can either be wired or wireless or
+    both at the same time.
+
+    In this session, it will be assuming that wireless communication
+    has been deployed for IoT.    
+
+  \end{block}
+
+  \begin{block}{Mobile Phones}
+
+    As an IoT, mobile phones can always connected to the internet
+    using several distinct wireless technologies.
+    
+  \end{block}
+
+}
+
+\frame{
+  \frametitle{Radio Waves}
+
+  \begin{block}{Radio frequency waves}
+
+    has been the most commonly used way of carrying data wirelessly
+    since more than a century after Hertz proved that electromagnetic
+    waves can be used to carry a signal.
+
+  \end{block}
+
+  \pause
+  
+  \begin{block}{Since then a lot has changed and much of the Radio Spectrum}
+
+    is utilised for several \href{https://www.youtube.com/watch?v=u_aLESDql1U
+    }{billions and billions} of frequencies.
+
+  \end{block}
+  
+  \begin{alertblock}{Radio Spectrum}
+    
+    \href{https://upload.wikimedia.org/wikipedia/commons/d/df/United_States_Frequency_Allocations_Chart_2011_-_The_Radio_Spectrum.pdf}{US Radio Spectrum PDF}
+
+  \end{alertblock}
+  
+}
+
+\frame{
+  \frametitle{Radio Spectrum}
+
+  \begin{example}
+
+    Mobile Digital Phones are always connected to
+
+      \begin{itemize}
+
+      \item \href{https://en.wikipedia.org/wiki/GSM}{GSM}
+        - Global System for Mobile Communications
+      \item \href{https://en.wikipedia.org/wiki/General_Packet_Radio_Service}{
+        GPRS} - General Packet Radio Service
+      \item \href{https://en.wikipedia.org/wiki/3G}{3G} 
+      \item \href{https://en.wikipedia.org/wiki/LTE_Advanced}{4G/LTE}
+      \item \href{https://en.wikipedia.org/wiki/5G}{5G}
+        
+      \end{itemize}
+      
+  \end{example}
+  
+  \pause
+  
+  \begin{example}
+    
+    \href{https://en.wikipedia.org/wiki/DVB-T}{DVB-T has replaced analog TV}
+    
+  \end{example}
+  
+  \pause
+  
+  \begin{example}
+    
+    \href{https://en.wikipedia.org/wiki/Radio_spectrum
+    }{Electromagnetic Radio Spectrum}
+    
+  \end{example}
+  
+}
+
+\frame{
+  \frametitle{Radio Frequency Issues}
+  
+  \begin{block}{Radio Frequency Electromagnetic waves}
+    
+    \begin{center}
+      
+      entails many issues such as ::
+      
+      \begin{itemize}
+        
+      \item Interference
+      \item Acceptable safe Radiation levels  
+      \item Electromagnetic compatibility 
+      \item Security
+        
+      \end{itemize}
+      
+    \end{center}
+    
+  \end{block}
+  
+  \pause
+  
+  \begin{block}{Solution}
+    
+    \begin{center}
+      
+      \begin{itemize}
+        
+      \item Compliance with Standards
+      \item Certification 
+      \item Spectrum Management
+      \item Safety Normalisations
+        
+      \end{itemize}  
+      
+    \end{center}
+    
+  \end{block}
+  
+  \begin{alertblock}{Radio Spectrum}
+    
+    \begin{center}
+      
+      \href{https://upload.wikimedia.org/wikipedia/commons/d/df/United_States_Frequency_Allocations_Chart_2011_-_The_Radio_Spectrum.pdf}{US Radio Spectrum PDF}
+      
+    \end{center}
+    
+  \end{alertblock}
+    
+}
+
+\section{Regulations in Mauritius}
+
+\frame{
+  \frametitle{ICTA}
+  
+  \begin{block}{\href{https://www.icta.mu/about.html}{ICTA.mu}}
+    
+    is the regulatory body in charge of
+
+    \begin{itemize}
+      
+    \item Allocation
+    \item Management
+    \item Review
+    \item Organisation
+    \item Regulation
+      
+    \end{itemize}
+
+    of the frequency spectrum in Mauritius by setting up a radio
+    frequency management unit and be the Controller of
+    Certification Authorities.
+    
+  \end{block}
+  
+  Nonetheless, the ICTA implements Government policy and provide
+  technical monitoring of the ICT in accordance with recognised
+  international standard practices, protocols.
+    
+}
+
+\frame{
+  \frametitle{ICTA Regulations}
+
+  \large
+  
+  \begin{block}{\href{https://www.icta.mu/docs/laws/Clearance_Regulations2019.pdf
+      }{ICTA Clearance Regulations}}
+    
+    Information on regulations and clearance to Import ICT Equipment
+    such as CE marking means the marking affixed on the packaging.
+    
+  \end{block}
+
+  \begin{definition}
+    
+    ICT equipment means an equipment intended for telecommunication
+    or radio communication.
+    
+  \end{definition}
+
+}
+
+\frame{
+  \frametitle{Some examples of Radio Licenses}
+
+  \begin{block}{Types of Licenses}
+
+    you can apply for in Mauritius
+      
+      \begin{itemize}
+        
+      \item Radio Apparatus Licence
+      \item Radio Amateur
+      \item INMARSAT Mobile Earth Station
+      \item Network Spectrum
+      \item Temporary Test Licence for Frequency Usage
+      \item Fixed Radio Spectrum
+        
+      \end{itemize}
+  
+  \end{block}
+  
+  \begin{block}{Activities of ICTA includes}
+      
+      \begin{itemize}
+        
+      \item Spectrum assignment and licensing
+      \item Station and Apparatus licensing
+      \item International Spectrum coordination
+        
+      \end{itemize}
+      
+  \end{block}
+  
+}
+
+\section{International Bodies}
+
+\frame{
+  \frametitle{ICTA and International Bodies}
+  
+  \begin{block}{The ICTA ensures operation within the limits of radio frequency}
+
+    radiation as recommended by the \href{https://www.icnirp.org}{International
+      Commission on Non-ionizing Radiation Protection, ICNIRP}.
+    
+  \end{block}
+  
+  \begin{block}{Other International Bodies include}
+      
+      \begin{itemize}
+        
+      \item relevant ITU-R Study Groups
+      \item ITU Radio Assemblies 
+      \item Regional Radiocommunication Conferences
+      \item World Radio Conferences 
+        
+      \end{itemize}
+
+  \end{block}
+
+}
+
+\section{The End and Questions}
+
+\frame{
+  \frametitle{Questions}
+  
+  \huge
+  
+  \begin{block}
+    
+    QUESTIONS!
+    
+  \end{block}
+  
+}
+
+\frame{
+  \frametitle{Questions}
+
+  \huge
+
+  \begin{block}
+
+    Thanks for your Time
+
+    Twitter \href{https://twitter.com/zcoldplayer}{@zcoldplayer}
+
+    or
+
+    Email \href{https://xmail.net/z.coldplayer}{z dot coldplayer at
+      xmail dot net}
+
+  \end{block}
+
+}
+
+\end{document}
